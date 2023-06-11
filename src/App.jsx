@@ -1,39 +1,33 @@
-import { useState } from 'react'
-import { Link, Route, Routes, useNavigate } from 'react-router-dom'
+import { Link, Route, Routes } from 'react-router-dom'
 import './App.css'
-import PageOne from './pages/PageOne'
-import PageTwo from './pages/PageTwo'
-import PageThree from './pages/PageThree'
+import Home from './pages/Home'
+import Games from './pages/Games'
+import Solitaire from './pages/games/solitaire/Solitaire'
+import TBA from './pages/games/TBA/TBA'
 
-function App() {
-  const [count, setCount] = useState(0)
-  const navigate = useNavigate()
+const NavLinks = () => {
+  return (
+    <nav>
+      <ul>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/games'>Games</Link></li>
+      </ul>
+    </nav>
+  )
+}
 
-  const delayedPageThree = () => {
-    setTimeout(() => {
-      navigate('3')
-    }, 3000);
-  }
-
+const App = () => {
   return (
     <>
-      <h1>Jani-e&apos;s website</h1>
-      {count}
-      <button onClick={() => setCount(count + 1)}>click me to increment</button>
-      <h2>Routing</h2>
-      <h3>Links</h3>
-      <ul>
-        <li><Link to='/'>Home page / page 1</Link></li>
-        <li><Link to='2'>Page 2</Link></li>
-      </ul>
-      <h3>UseNavigate</h3>
-      <p>To page 3 click the below button and wait 3 seconds</p>
-      <button onClick={() => delayedPageThree()}>Click me</button>
-      <h3>Routes &apos;pages&apos;</h3>
+      <Link to='/'>
+        <h1>Jani-e&apos;s website</h1>
+      </Link>
+      <NavLinks></NavLinks>
       <Routes>
-        <Route path='/' element={<PageOne />} />
-        <Route path='/2' element={<PageTwo />} />
-        <Route path='/3' element={<PageThree />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/games' element={<Games />} />
+        <Route path='/games/solitaire' element={<Solitaire />} />
+        <Route path='/games/tba' element={<TBA />} />
       </Routes>
     </>
   )

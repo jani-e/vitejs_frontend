@@ -1,10 +1,10 @@
-const PageOne = () => {
+const Home = () => {
   const style = {
-    backgroundColor: 'gray'
+    backgroundColor: 'lightgray'
   }
   return (
     <div style={style}>
-      <p>Page 1</p>
+      <h2>Home</h2>
       <svg height='80' width='200'>
         <text x={0} y={15} fill='red' transform='rotate(30 20,40)'>Rotated SVG text</text>
       </svg>
@@ -12,4 +12,4 @@ const PageOne = () => {
   )
 }
 
-export default PageOne
+export default Home
