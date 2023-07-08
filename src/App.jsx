@@ -2,8 +2,8 @@ import { Link, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
 import Games from './pages/Games'
-import Solitaire from './pages/games/solitaire/Solitaire'
-import TBA from './pages/games/TBA/TBA'
+import Solitaire from './pages/games/Solitaire'
+import TBA from './pages/games/TBA'
 
 const NavLinks = () => {
   return (
