@@ -1,20 +1,12 @@
 import { Link, Route, Routes } from 'react-router-dom'
-import './App.css'
-import Home from './pages/Home'
-import Games from './pages/Games'
-import Solitaire from './pages/games/Solitaire'
-import TBA from './pages/games/TBA'
+import 'src/App.css'
+import NavLinks from 'src/components/NavLinks'
+import Home from 'src/pages/Home'
+import Games from 'src/pages/Games'
+import Solitaire from 'src/pages/games/Solitaire'
+import TBA from 'src/pages/games/TBA'
 
-const NavLinks = () => {
-  return (
-    <nav>
-      <ul>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/games'>Games</Link></li>
-      </ul>
-    </nav>
-  )
-}
+
 
 const App = () => {
   return (

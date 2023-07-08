@@ -32,12 +32,3 @@ const Games = () => {
 }
 
 export default Games
-
-/*
-
-const listOfGames = [
-  'Solitaire',
-  'TBA'
-]
-
-*/
