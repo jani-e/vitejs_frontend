@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom"
-import { useState, useEffect } from "react"
-import gamesService from "src/services/games"
+import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import gamesService from 'src/services/games'
 
 const Games = () => {
-
-  const [ games, setGames ] = useState([])
+  const [games, setGames] = useState([])
 
   useEffect(() => {
     async function fetchGames() {
@@ -22,11 +21,12 @@ const Games = () => {
     <>
       <h2>Games</h2>
       <ul>
-        {games.map((game) => <li key={game}>
-        <Link to={game.toLowerCase()}>{game}</Link>
-        </li>)}
+        {games.map((game) => (
+          <li key={game}>
+            <Link to={game.toLowerCase()}>{game}</Link>
+          </li>
+        ))}
       </ul>
-      
     </>
   )
 }

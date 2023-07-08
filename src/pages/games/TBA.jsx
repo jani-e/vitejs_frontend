@@ -1,9 +1,5 @@
 const TBA = () => {
-  return (
-    <>
-      placeholder
-    </>
-  )
+  return <>placeholder</>
 }
 
 export default TBA
