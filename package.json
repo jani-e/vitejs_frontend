@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite --port 3000 --host",
     "build": "vite build",
-    "copy-to-backend": "cp -r dist/ ../nodejs_backend/dist",
+    "remove-old": "rm -r ../nodejs_backend/dist",
+    "move-new": " mv -f dist/ ../nodejs_backend/dist",
+    "build-to-backend": "vite build && npm run remove-old && npm run move-new",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
