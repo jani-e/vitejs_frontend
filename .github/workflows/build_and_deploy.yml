@@ -24,11 +24,8 @@ jobs:
       - name: Build React app
         run: npm run build
 
-      - name: Zip build folder
-        run: zip -r vitejs_frontend.zip dist
-
       - name: Upload build to GitHub artifact
         uses: actions/upload-artifact@v4
         with:
           name: react-build
-          path: vitejs_frontend.zip
+          path: dist
